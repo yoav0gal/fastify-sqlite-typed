@@ -1,15 +1,25 @@
 {
   "name": "fastify-sqlite-typed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fastify-sqlite-plugin",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Yoav gal",
   "license": "MIT",
+  "homepage": "https://github.com/yoav0gal/fastify-sqlite-typed",
+  "bugs": {
+    "url": "https://github.com/yoav0gal/fastify-sqlite-typed/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoav0gal/fastify-sqlite-typed"
+  },
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "prepublish": "npm run build",
+    "publish": "npm publish --access public",
     "build": "tsc",
     "test": "npm run lint && npm run unit && npm run test:typescript",
     "lint": "standard && npm run lint:typescript",

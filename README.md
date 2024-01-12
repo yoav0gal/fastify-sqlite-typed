@@ -15,8 +15,8 @@
 
 # Fastify SQLite Typed Plugin
 
-[![Beta](https://img.shields.io/badge/status-beta-orange.svg)](https://github.com/yoav0gal/fastify-hana)
-[![npm version](https://img.shields.io/npm/v/fastify-hana.svg?style=flat-square)](https://www.npmjs.com/package/fastify-hana)
+[![Beta](https://img.shields.io/badge/status-beta-orange.svg)](https://github.com/yoav0gal/fastify-sqlite-typed)
+[![npm version](https://img.shields.io/npm/v/fastify-sqlite-typed?style=flat-square)](https://www.npmjs.com/package/fastify-sqlite-typed)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 [![License](https://img.shields.io/npm/l/fastify-hana.svg?style=flat-square)](https://choosealicense.com/licenses/mit/)
 
