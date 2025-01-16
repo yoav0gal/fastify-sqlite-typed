@@ -24,6 +24,8 @@ SQLite integration plugin for [Fastify](https://www.fastify.io/)
 
 Effortlessly incorporate SQLite databases into your Fastify applications using `fastify-sqlite-typed`. This plugin leverages `node-sqlite3` and `node-sqlite` for effective database operations.
 
+> **For Fastify V 4.X.X [click here](https://github.com/yoav0gal/fastify-sqlite-typed/tree/Fastify-V4.x.x)**
+
 ## Additional Resources
 
 - `node-sqlite3` Documentation: [https://github.com/TryGhost/node-sqlite3](https://github.com/TryGhost/node-sqlite3)
@@ -52,11 +54,14 @@ Import and register the plugin with your Fastify instance, and execute a sample 
 
 ```javascript
 import fastify from "fastify";
-import sqlitePlugin from "fastify-sqlite-typed";
+// With fastify-plugin
+import { fpSqlitePlugin } from "fastify-sqlite-typed"; 
+// Without fastify-plugin
+// import { sqlitePlugin } from "fastify-sqlite-typed";
 
 const app = fastify();
 
-app.register(sqlitePlugin, {
+app.register(fpSqlitePlugin, {
   dbFilename: "./myDB.db",
   // additional options
 });
@@ -67,10 +72,9 @@ app.get("/users", async (request, reply) => {
   reply.send(users);
 });
 
-app.listen(3000, (err) => {
-  if (err) throw err;
-  console.log(`Server listening on ${app.server.address().port}`);
-});
+fastify.listen({ port: 3000 }, (err, address) => {
+  if (err) throw err
+})
 ```
 
 ## Options
